@@ -1,4 +1,8 @@
-package leetcode
+package models
+
+type Models struct {
+	ListNode
+}
 
 type ListNode struct {
 	Val  int

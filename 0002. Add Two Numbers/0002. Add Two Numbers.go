@@ -1,5 +1,9 @@
 package leetcode
 
+import "github.com/hiro942/leetcode/models"
+
+type ListNode = models.ListNode
+
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	carry := 0
 	head := new(ListNode)
