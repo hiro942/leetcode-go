@@ -1,13 +1,13 @@
 package utils
 
-func max(a int, b int) int {
+func Max(a int, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
 
-func min(a int, b int) int {
+func Min(a int, b int) int {
 	if a < b {
 		return a
 	}

@@ -1,5 +1,9 @@
 package leetcode
 
+import "github.com/hiro942/leetcode/utils"
+
+var min = utils.Min
+
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	n := len(nums1) + len(nums2)
 	if n%2 == 0 {
