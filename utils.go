@@ -1,13 +1,13 @@
-package utils
+package leetcode
 
-func Max(a int, b int) int {
+func max(a int, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
 
-func Min(a int, b int) int {
+func min(a int, b int) int {
 	if a < b {
 		return a
 	}

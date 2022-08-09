@@ -1,4 +1,4 @@
-package models
+package leetcode
 
 type ListNode struct {
 	Val  int
