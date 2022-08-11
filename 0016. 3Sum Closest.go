@@ -1,3 +1,7 @@
+/*
+	枚举 + 双指针 O(n^2) n为nums长度
+*/
+
 package leetcode
 
 import (
