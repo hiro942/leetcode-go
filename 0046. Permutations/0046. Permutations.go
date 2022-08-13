@@ -1,25 +1,27 @@
 package leetcode
 
+var (
+	ans     [][]int
+	visited []bool
+)
+
 func permute(nums []int) [][]int {
-	var (
-		ans     [][]int
-		path    []int
-		visited = make([]bool, len(nums))
-	)
-	dfs(nums, path, visited, &ans)
+	ans = [][]int{}
+	visited = make([]bool, len(nums))
+	dfs(nums, []int{})
 	return ans
 }
 
-func dfs(nums []int, path []int, visited []bool, ans *[][]int) {
+func dfs(nums []int, path []int) {
 	if len(path) == len(nums) {
-		*ans = append(*ans, path)
+		ans = append(ans, path)
 		return
 	}
 
-	for i, num := range nums {
+	for i, val := range nums {
 		if !visited[i] {
 			visited[i] = true
-			dfs(nums, append(path, num), visited, ans)
+			dfs(nums, append(path, val))
 			visited[i] = false
 		}
 	}
