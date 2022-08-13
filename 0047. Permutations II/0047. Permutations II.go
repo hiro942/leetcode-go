@@ -19,6 +19,7 @@ func permuteUnique(nums []int) [][]int {
 
 func dfs(nums []int, path []int) {
 	if len(path) == len(nums) {
+		// 这里 append 的必须是 path 元素的复制
 		ans = append(ans, append([]int{}, path...))
 		return
 	}
