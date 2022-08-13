@@ -42,3 +42,10 @@ func divide(dividend int, divisor int) int {
 	// 由于要取整数部分，这里需要取右边界r防止出现答案为2，而 l = 1.99999 r = 2.0000.. 的情况
 	return int(math.Floor(r)) * minus
 }
+
+func abs(num int) int {
+	if num < 0 {
+		return -num
+	}
+	return num
+}

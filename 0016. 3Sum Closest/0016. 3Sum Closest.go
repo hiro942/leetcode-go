@@ -41,3 +41,10 @@ func threeSumClosest(nums []int, target int) int {
 	}
 	return bestSum
 }
+
+func abs(num int) int {
+	if num < 0 {
+		return -num
+	}
+	return num
+}

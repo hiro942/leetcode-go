@@ -34,3 +34,10 @@ func find(nums1 []int, i int, nums2 []int, j int, k int) float64 {
 		return find(nums1, ki+1, nums2, j, k-(ki-i+1))
 	}
 }
+
+func min(a int, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}

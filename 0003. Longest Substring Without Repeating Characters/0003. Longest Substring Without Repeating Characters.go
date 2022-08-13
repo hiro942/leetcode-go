@@ -11,3 +11,10 @@ func lengthOfLongestSubstring(s string) (ans int) {
 	}
 	return ans
 }
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
