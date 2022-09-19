@@ -5,6 +5,7 @@ import "strconv"
 var ans []string
 
 func restoreIpAddresses(s string) []string {
+	ans = []string{}
 	dfs(s, "", 0, 0)
 	return ans
 }
