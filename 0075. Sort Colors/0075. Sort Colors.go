@@ -1,9 +1,5 @@
 package leetcode
 
-func sortColors(nums []int) {
-	quickSort(nums, 0, len(nums)-1)
-}
-
 func quickSort(nums []int, l, r int) {
 	if l >= r {
 		return
@@ -31,3 +27,23 @@ func quickSort(nums []int, l, r int) {
 	quickSort(nums, l, j)
 	quickSort(nums, j+1, r)
 }
+
+func sortColors(nums []int) {
+	quickSort(nums, 0, len(nums)-1)
+}
+
+// Other Method
+//func sortColors(nums []int) {
+//	for i, j, k := 0, 0, len(nums)-1; j <= k; {
+//		if nums[j] == 0 {
+//			nums[i], nums[j] = nums[j], nums[i]
+//			i++
+//			j++
+//		} else if nums[j] == 2 {
+//			nums[j], nums[k] = nums[k], nums[j]
+//			k--
+//		} else {
+//			j++
+//		}
+//	}
+//}
