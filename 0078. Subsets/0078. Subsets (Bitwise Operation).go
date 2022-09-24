@@ -1,6 +1,6 @@
 package leetcode
 
-func subsets(nums []int) [][]int {
+func subsetsBitwise(nums []int) [][]int {
 	var res [][]int
 
 	n := len(nums)

@@ -1,22 +1,22 @@
 package leetcode
 
-func subsetsDFS(nums []int) [][]int {
+func combine(n int, k int) [][]int {
 	var res [][]int
 	var path []int
 	var dfs func(int)
-
 	dfs = func(u int) {
-		if u == len(nums) {
+		if len(path) == k {
 			res = append(res, append([]int{}, path...))
 			return
 		}
-		dfs(u + 1) // do not choose nums[u]
-
-		path = append(path, nums[u])
-		dfs(u + 1) // choose nums[u]
+		if u > n {
+			return
+		}
+		dfs(u + 1)
+		path = append(path, u)
+		dfs(u + 1)
 		path = path[:len(path)-1]
 	}
-
-	dfs(0)
+	dfs(1)
 	return res
 }
