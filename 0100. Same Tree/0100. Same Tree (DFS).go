@@ -6,7 +6,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func isSameTree(p *TreeNode, q *TreeNode) bool {
+func isSameTreeDFS(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {
 		return true
 	}
