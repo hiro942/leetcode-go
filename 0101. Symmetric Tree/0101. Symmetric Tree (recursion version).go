@@ -11,7 +11,7 @@ type TreeNode struct {
 // 2. root1.Left 和 root2.Right 镜像
 // 3. root1.Right 和 root2.Left 镜像
 
-func isSymmetric(root *TreeNode) bool {
+func isSymmetricRecursion(root *TreeNode) bool {
 	var dfs func(*TreeNode, *TreeNode) bool
 	dfs = func(root1 *TreeNode, root2 *TreeNode) bool {
 		if root1 == nil || root2 == nil {
